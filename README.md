@@ -1,7 +1,7 @@
 # FOSSEE-Osdag
 OSDAG PROJECT 
 DOCUMENTATION:
- 
+
 Task 1 :  
 •	Objective:   Create a shear force (SFD) and bending moment diagram (BMD) from the values provided in the Excel sheet using PyPlot.
 •	Explanation of Code : 
