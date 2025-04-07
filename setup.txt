@@ -1,0 +1,50 @@
+PythonOCC Setup using Anaconda (Recommended Setup)
+
+1. Install Anaconda (if not already installed)
+------------------------------------------------
+Download and install the latest version of Anaconda from:
+https://www.anaconda.com/products/distribution
+
+2. Add Anaconda to System Environment Variables (Optional but Recommended)
+---------------------------------------------------------------------------
+- Search for "Environment Variables" in Windows.
+- Under "System Variables", find 'Path' -> click Edit -> Add:
+    C:\Users\<YourUser>\anaconda3
+    C:\Users\<YourUser>\anaconda3\Scripts
+
+3. Import pyoccenv YAML File into Anaconda Navigator
+-----------------------------------------------------
+- Open Anaconda Navigator
+- Go to Environments (left panel)
+- Click the "Import" button at the bottom
+- Name: pyoccenv
+- Location: Browse and select the provided pyoccenv.yaml file
+- Click "Import"
+
+4. Activate Environment in VS Code
+----------------------------------
+- Open VS Code
+- Open terminal and run:
+    conda activate pyoccenv
+
+- Ensure Python extension is installed in VS Code and the correct interpreter is selected.
+
+5. Ensure Python Version is 3.11
+--------------------------------
+If creating the environment manually, run:
+
+    conda create -n pyoccenv python=3.11
+    conda activate pyoccenv
+    conda install -c conda-forge pythonocc-core
+
+Or, modify the YAML file before importing to include:
+    dependencies:
+      - python=3.11
+
+6. Verify Installation
+----------------------
+- Inside the activated environment, run Python and execute:
+    import OCC
+    print("PythonOCC is working")
+
+You're now ready to work with PythonOCC using Conda environment in VS Code.
